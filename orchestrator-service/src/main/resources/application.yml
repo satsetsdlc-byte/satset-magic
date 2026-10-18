@@ -4,10 +4,13 @@ server:
 spring:
   application:
     name: agentic-orchestrator-service
+
   datasource:
     url: ${DATABASE_URL:jdbc:h2:mem:agentic_db;DB_CLOSE_DELAY=-1;MODE=PostgreSQL}
     username: ${DATABASE_USER:sa}
     password: ${DATABASE_PASSWORD:}
+    driver-class-name: org.postgresql.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
