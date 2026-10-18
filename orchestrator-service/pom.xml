@@ -44,6 +44,12 @@
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
+             <!-- Google Cloud SQL Socket Factory -->
+         <dependency>
+           <groupId>com.google.cloud.sql</groupId>
+           <artifactId>postgres-socket-factory</artifactId>
+           <version>1.19.0</version> <!-- Use mysql-socket-factory for MySQL -->
+         </dependency>
 
         <!-- LangChain4j Core & Models -->
         <dependency>
