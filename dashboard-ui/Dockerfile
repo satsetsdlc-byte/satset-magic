@@ -1,3 +1,4 @@
+
 # Stage 1: Install dependencies
 FROM node:20-alpine AS deps
 WORKDIR /app
@@ -13,6 +14,13 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED=1
+
+# Public URLs must be available at build time
+ARG NEXT_PUBLIC_ORCHESTRATOR_API_URL
+ENV NEXT_PUBLIC_ORCHESTRATOR_API_URL=${NEXT_PUBLIC_ORCHESTRATOR_API_URL}
+
+ARG NEXT_PUBLIC_WS_URL
+ENV NEXT_PUBLIC_WS_URL=${NEXT_PUBLIC_WS_URL}
 
 RUN npm run build
 
