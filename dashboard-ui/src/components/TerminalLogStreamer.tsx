@@ -97,7 +97,7 @@ export function TerminalLogStreamer({
 
   // 3. Realtime SSE Event Stream
   useEffect(() => {
-    const apiBase = process.env.NEXT_PUBLIC_ORCHESTRATOR_API_URL || "http://127.0.0.1:8080";
+    const apiBase = process.env.NEXT_PUBLIC_ORCHESTRATOR_API_URL || "https://satset-orchestrator-348109038643.asia-south1.run.app";
     const streamUrl = workflowId
       ? `${apiBase}/api/workflow/${workflowId}/stream`
       : `${apiBase}/api/workflow/stream`;
