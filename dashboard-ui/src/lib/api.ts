@@ -1,6 +1,6 @@
 import { WorkflowSummary, WorkflowDetail } from "./types";
 
-const API_BASE = process.env.NEXT_PUBLIC_ORCHESTRATOR_API_URL || "http://127.0.0.1:8080";
+const API_BASE = process.env.NEXT_PUBLIC_ORCHESTRATOR_API_URL || "https://satset-orchestrator-348109038643.asia-south1.run.app";
 
 export async function fetchWorkflows(): Promise<WorkflowSummary[]> {
   try {
